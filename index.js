@@ -2,7 +2,7 @@ const express = require('express');
 const CronJob = require('cron').CronJob;
 const app = express();
 
-const {PORT, NEWSMN_CRON_HOUR} = require('./config/config');
+const {PORT, NEWSMN_CRON_HOUR, UB_TIME_ZONE} = require('./config/config');
 const scraperRoutes = require('./routes/scraper');
 
 const newsScrapper = require("./controller/newsmn");
@@ -10,7 +10,7 @@ const newsScrapper = require("./controller/newsmn");
 const job = new CronJob(`0 ${NEWSMN_CRON_HOUR} * * *`,async ()=>{
     console.log("hello kkk",new Date().getSeconds());
      newsScrapper.scrapeData();
-});
+},null,true,UB_TIME_ZONE);
 job.start();
 
 
