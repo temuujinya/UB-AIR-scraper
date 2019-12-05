@@ -29,7 +29,7 @@ try{
         // let titleNodeList = document.querySelectorAll(`a.storylink`);
 
         let titleLinkArray  = [];
-        for(let i = 0; i<5; i++){
+        for(let i = 0; i<20; i++){
             
             titleLinkArray[i]={
                 title: titleNodeList[i].innerText.trim(),
