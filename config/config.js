@@ -8,5 +8,5 @@ if(dotenv.error)
     throw dotenv.error
 
 const {parsed:envs} = dotenv;
-console.log(envs);
+// console.log(envs);
 module.exports=envs;
