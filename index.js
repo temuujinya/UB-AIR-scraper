@@ -2,14 +2,14 @@ const express = require('express');
 const CronJob = require('cron').CronJob;
 const app = express();
 
-const {PORT} = require('./config/config');
+const {PORT, NEWSMN_CRON_HOUR} = require('./config/config');
 const scraperRoutes = require('./routes/scraper');
 
 const newsScrapper = require("./controller/newsmn");
 
-const job = new CronJob("* 5,11,16,20 * * *",async ()=>{
-    // console.log("hello kkk",new Date().getSeconds());
-     newsScrapper.scrapeData();
+const job = new CronJob(`* ${NEWSMN_CRON_HOUR} * * *`,async ()=>{
+    console.log("hello kkk",new Date().getSeconds());
+    //  newsScrapper.scrapeData();
 });
 job.start();
 
