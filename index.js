@@ -7,9 +7,9 @@ const scraperRoutes = require('./routes/scraper');
 
 const newsScrapper = require("./controller/newsmn");
 
-const job = new CronJob(`* ${NEWSMN_CRON_HOUR} * * *`,async ()=>{
+const job = new CronJob(`0 ${NEWSMN_CRON_HOUR} * * *`,async ()=>{
     console.log("hello kkk",new Date().getSeconds());
-    //  newsScrapper.scrapeData();
+     newsScrapper.scrapeData();
 });
 job.start();
 

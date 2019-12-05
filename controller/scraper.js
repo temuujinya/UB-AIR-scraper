@@ -4,9 +4,6 @@ const {readFromJsonFile,getLastCreatedFileName} = require("./workingWithFile");
 const identifySource = async (req,res)=>{
     if(req.params.SITE.toLowerCase()==="news.mn"){
         let newsData = await newsmn.scrapeData();
-        if(req.query.howMany){
-            console.log(req.query.howMany);
-        }
         res.status(200).json(newsData);
     }else{
         res.send("Something wrong");
