@@ -1,0 +1,21 @@
+{
+  "name": "ub-air-scrapper",
+  "version": "1.0.0",
+  "description": "for NUM-mobile last project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Temuujin",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "puppeteer": "^2.0.0"
+  },
+  "devDependencies": {}
+}
