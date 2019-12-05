@@ -15,7 +15,7 @@ let browser;
 const scrapeData = async ()=>{
 try{
     // open the headless browser
-    browser = await puppeteer.launch({headless:false});
+    browser = await puppeteer.launch({headless:true});
     // open a new page
     let page = await browser.newPage();
     // enter url in page
