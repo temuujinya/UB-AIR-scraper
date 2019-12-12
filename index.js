@@ -6,12 +6,20 @@ const {PORT, NEWSMN_CRON_HOUR, UB_TIME_ZONE} = require('./config/config');
 const scraperRoutes = require('./routes/scraper');
 
 const newsScrapper = require("./controller/newsmn");
+const ikonScrapper = require("./controller/ikonmn");
 
-const job = new CronJob(`0 ${NEWSMN_CRON_HOUR} * * *`,async ()=>{
-    console.log("hello kkk",new Date().getSeconds());
+const newsJob = new CronJob(`0 ${NEWSMN_CRON_HOUR} * * *`,async ()=>{
+    console.log("news.mn scraping job starting",new Date().getSeconds());
      newsScrapper.scrapeData();
 },null,true,UB_TIME_ZONE);
-job.start();
+
+const ikonJob = new CronJob(`0 ${IKONMN_CRON_HOUR} * * *`,async ()=>{
+    console.log("ikon.mn scraping job starting",new Date().getSeconds());
+     ikonScrapper.scrapeData();
+},null,true,UB_TIME_ZONE);
+
+newsJob.start();
+ikonJob.start();
 
 
 app.get('/',(req,res)=>{
