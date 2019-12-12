@@ -2,7 +2,7 @@ const express = require('express');
 const CronJob = require('cron').CronJob;
 const app = express();
 
-const {PORT, NEWSMN_CRON_HOUR, UB_TIME_ZONE} = require('./config/config');
+const {PORT, NEWSMN_CRON_HOUR, UB_TIME_ZONE, IKONMN_CRON_HOUR} = require('./config/config');
 const scraperRoutes = require('./routes/scraper');
 
 const newsScrapper = require("./controller/newsmn");
