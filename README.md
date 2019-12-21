@@ -10,6 +10,7 @@ Puppeteer -г ашиглаж news.mn болон ikon.mn -н мэдээг цаг 
 
 ``` npm start ```
 
+## Веб апп нь дараах хаяг дээр ажиллана
 localhost:5000/scraper/news.mn
 localhost:5000/scraper/ikon.mn
 
