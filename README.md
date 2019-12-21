@@ -6,6 +6,8 @@ Puppeteer -г ашиглаж news.mn болон ikon.mn -н мэдээг цаг 
 
 ``` npm install ```
 
+``` config/same.env -г .env болгож өөрчил```
+
 ``` npm start ```
 
 localhost:5000/scraper/news.mn
