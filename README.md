@@ -1,7 +1,7 @@
 # UB-AIR-scraper
 Puppeteer -г ашиглаж news.mn болон ikon.mn -н мэдээг цаг тутамд шалгаж JSON-д хадгалж байгаа
 
-# Ажлуулах
+# Ажиллуулах
 ``` git clone https://github.com/USOTT/UB-AIR-scraper ```'
 
 ``` npm install ```
