@@ -1,6 +1,10 @@
 # UB-AIR-scraper
 Puppeteer -г ашиглаж news.mn болон ikon.mn -н мэдээг цаг тутамд шалгаж JSON-д хадгалж байгаа
 
+## Demo
+https://wooden-globe.glitch.me/scraper/news.mn
+https://wooden-globe.glitch.me/scraper/ikon.mn
+
 # Ажиллуулах
 ``` git clone https://github.com/USOTT/UB-AIR-scraper ```'
 
